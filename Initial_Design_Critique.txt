@@ -1,0 +1,16 @@
+Initial Design Document Critique
+Jake Meyer
+
+I believe the general idea I wrote in my initial design document for this project was very helpful in the construction of the code. 
+But, there were a few additions and adjustments I had to make to make the program effective.
+
+I did end up searching each and every pixel of the image to get the RGB values using a 2D array, and then changing the RGB values 
+that matched the user's old color to entry to the RGB values of the user's new color entry.  But instead of using the 255 scale, I 
+used hex values to store each color as a single int.
+
+I included most of the exceptions I laid out in the initial design document.  I returned an error message if the user tried to enter 
+an invalid file type for either the old image file or the new image file.  I returned an error if the file could not be found.
+
+I also added a few if statements to include any errors the user may make that wouldn't decode the message successfully.  If the user 
+typed in inaccessible colors, I returned an error message.  If the old color and the new color were equal to each other, I returned 
+a message to tell the user that the message wouldn't be decoded if we simply changed the old color to the same color it already was.
